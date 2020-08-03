@@ -1,0 +1,578 @@
+{
+  "adresse": {
+    "types": {
+      "banque": {
+        "id": 3,
+        "name": "Banque"
+      },
+"bar": {
+        "id": 4,
+        "name": "Bar"
+      },
+"bar_restaurant": {
+        "id": 5,
+        "name": "Bar-Restaurant"
+      },
+"bibliotheque": {
+        "id": 6,
+        "name": "Bibliothèque"
+      },
+"bijouterie": {
+        "id": 7,
+        "name": "Bijouterie"
+      },
+"boutique": {
+        "id": 8,
+        "name": "Boutique"
+      },
+"bureau_publique": {
+        "id": 9,
+        "name": "Bureau publique"
+      },
+"bureau_prive": {
+        "id": 10,
+        "name": "Bureau Privé"
+      },
+"car_wash": {
+        "id": 11,
+        "name": "Car Wash"
+      },
+"centre_culturel": {
+        "id": 13,
+        "name": "Centre culturel"
+      },
+"centre_de_divertissement": {
+        "id": 14,
+        "name": "Centre de divertissement"
+      },                                      
+"centre-de_sante": {
+        "id": 15,
+        "name": "Centre de santé"
+      },
+"centre_sportif": {
+        "id": 16,
+        "name": "Centre Sportif"
+      },
+"cimentiere": {
+        "id": 17,
+        "name": "Cimentière"
+      },
+"cinema": {
+        "id": 18,
+        "name": "Cinéma"
+      },
+"club": {
+        "id": 19,
+        "name": "Club"
+      },
+"coiffeur": {
+        "id": 20,
+        "name": "Coiffeur"
+      },
+"depannage": {
+        "id": 21,
+        "name": "Dépannage"
+      },
+ "dry_cleaning": {
+        "id": 23,
+        "name": "Dry Cleaning"
+      },
+"ecole": {
+        "id": 24,
+        "name": "Ecole"
+      },
+"ecole_professionnel": {
+        "id": 25,
+        "name": "Ecole Professionnel"
+      },
+"eglise": {
+        "id": 27,
+        "name": "Eglise"
+      },
+"factorie": {
+        "id": 28,
+        "name": "Factorie"
+      },
+"ferme_agricole": {
+        "id": 29,
+        "name": "Ferme agricole"
+      },                                                                                     
+"garage": {
+        "id": 30,
+        "name": "Garage"
+      },
+"guest_house": {
+        "id": 31,
+        "name": "Guest House"
+      },
+"hopital": {
+        "id": 32,
+        "name": "Hôpital"
+      },
+"hotel": {
+        "id": 33,
+        "name": "Hôtel"
+      },
+"ice_cream": {
+        "id": 34,
+        "name": "Ice Cream"
+      },     
+"imprimerie": {
+        "id": 37,
+        "name": "Imprimerie"
+      },
+"laboratoire": {
+        "id": 38,
+        "name": "Laboratoire"
+      },
+"librairie": {
+        "id": 39,
+        "name": "Librairie"
+      },
+"ligne_telephonique": {
+        "id": 40,
+        "name": "Ligne Téléphonique"
+      },
+"location_de_voiture": {
+        "id": 41,
+        "name": "Location de voiture"
+      },
+"magasin": {
+        "id": 42,
+        "name": "Magasin"
+      },
+"Maison_de_transfert": {
+        "id": 45,
+        "name": "Maison de Transfert"
+      },
+"marche": {
+        "id": 46,
+        "name": "Marché"
+      },
+"market": {
+        "id": 47,
+        "name": "Market"
+      },
+"materiaux_de_construction": {
+        "id": 48,
+        "name": "Matériaux de construction"
+      },
+"morgue": {
+        "id": 49,
+        "name": "Morgue"
+      },
+"multi_service": {
+        "id": 50,
+        "name": "Multi-Service"
+      },
+"orphelinat": {
+        "id": 54,
+        "name": "Orphelinat"
+      },
+"pharmacie": {
+        "id": 57,
+        "name": "Pharmacie"
+      },
+"plage": {
+        "id": 59,
+        "name": "Plage"
+      },
+"port": {
+        "id": 60,
+        "name": "Port"
+      },
+"poulailler": {
+        "id": 61,
+        "name": "Poulailler"
+      },
+"prison": {
+        "id": 62,
+        "name": "Prison"
+      },      
+"restaurant": {
+        "id": 63,
+        "name": "Restaurant"
+      },
+"shop": {
+        "id": 64,
+        "name": "Shop"
+      },
+"station_de_service": {
+        "id": 65,
+        "name": "Station de service"
+      },
+"station_de_transport": {
+        "id": 66,
+        "name": "Station de transport"
+      },
+"studio_de_beaute": {
+        "id": 67,
+        "name": "Studio de beauté"
+      },
+"studio_de_musique_video": {
+        "id": 68,
+        "name": "Studio de musique, vidéo"
+      },
+"studio_de_photo": {
+        "id": 69,
+        "name": "Studio de photo"
+      },
+"tailleur": {
+        "id": 70,
+        "name": "Tailleur"
+      },  
+"warf_port": {
+        "id": 72,
+        "name": "Warf/Port"
+      },
+"universite": {
+        "id": 75,
+        "name": "Université"
+      },
+"usine": {
+        "id": 76,
+        "name": "Usine"
+      }  
+    }
+  },
+  "activite": {
+    "types": {
+      "cloth": {
+        "id": 1,
+        "name": "Cloth"
+      },
+      "accessory": {
+        "id": 2,
+        "name": "Accessories"
+      }
+    }
+  },
+  "categorie_activite": {
+    "types": {
+      "atelier_de_dessin": {
+        "id": 1,
+        "name": "Atelier de dessin"
+      },
+      "concours": {
+        "id": 2,
+        "name": "Concours"
+      },
+      "debat": {
+        "id": 3,
+        "name": "Debat"
+      },
+      "cinema": {
+        "id": 4,
+        "name": "Cinéma"
+      },
+      "expositions": {
+        "id": 5,
+        "name": "Expositions"
+      },
+      "programme_dj": {
+        "id": 9,
+        "name": "Programme DJ"
+      },
+      "concert": {
+        "id": 10,
+        "name": "Concert"
+      },
+      "fete": {
+        "id": 11,
+        "name": "Fête"
+      },
+      "forum": {
+        "id": 12,
+        "name": "Forum"
+      },
+      "gala": {
+        "id": 13,
+        "name": "Gala"
+      },
+      "bal": {
+        "id": 14,
+        "name": "Bal"
+      },
+      "festival": {
+        "id": 15,
+        "name": "Festival"
+      },
+      "gala": {
+        "id": 16,
+        "name": "Gala"
+      },
+      "croisade": {
+        "id": 17,
+        "name": "Croisade"
+      },
+      "service_de_priere": {
+        "id": 18,
+        "name": "Service de Priere"
+      },
+      "seminaire": {
+        "id": 19,
+        "name": "Seminaire"
+      },
+      "conference": {
+        "id": 20,
+        "name": "Conférence"
+      },
+      "convention": {
+        "id": 21,
+        "name": "Convention"
+      },
+      "tournee": {
+        "id": 22,
+        "name": "Tournée"
+      },
+      "sport": {
+        "id": 23,
+        "name": "Sport"
+      },
+      "musique": {
+        "id": 24,
+        "name": "Musique"
+      },
+      "concours": {
+        "id": 25,
+        "name": "Concours"
+      },
+      "camp": {
+        "id": 26,
+        "name": "Camp"
+      },
+      "formation": {
+        "id": 27,
+        "name": "Formation"
+      },
+      "journee_recreative": {
+        "id": 28,
+        "name": "Journée Récréative"
+      },
+      "piscine": {
+        "id": 29,
+        "name": "Piscine"
+      }
+    }
+  },
+  "besoins": {
+    "categorie": {
+      "alimentaire": {
+        "id": 1,
+        "name": "Besoins alimentaires"
+      },
+      "construction": {
+        "id": 2,
+        "name": "Materiaux de construction"
+      },
+      "cosmetique": {
+        "id": 3,
+        "name": "Produits cosmetiques"
+      },
+      "bureau": {
+        "id": 4,
+        "name": "Materiels de bureau"
+      },
+      "accessoires": {
+        "id": 5,
+        "name": "Accessoires"
+      },
+      "agriculture": {
+        "id": 6,
+        "name": "Agriculture"
+      },
+      "divers": {
+        "id": 7,
+        "name": "Divers"
+      },
+      "jouets": {
+        "id": 8,
+        "name": "Jouets"
+      },
+      "sanitaire": {
+        "id": 9,
+        "name": "Produits sanitaires"
+      },
+      "vetements": {
+        "id": 10,
+        "name": "Vêtements"
+      },
+      "electroniques": {
+        "id": 11,
+        "name": "Produits électroniques"
+      },
+      "tissu": {
+        "id": 12,
+        "name": "Tissus"
+      },
+      "maisons": {
+        "id": 13,
+        "name": "Maisons"
+      },
+      "animaux": {
+        "id": 14,
+        "name": "Animaux"
+      },
+      "vehicules": {
+        "id": 15,
+        "name": "Véhicules"
+      },
+      "chimiques": {
+        "id": 16,
+        "name": "Chimiques"
+      },
+      "mecaniques": {
+        "id": 17,
+        "name": "Mécaniques"
+      },
+      "terrains": {
+        "id": 18,
+        "name": "Terrains"
+      },
+      "artisanal": {
+        "id": 19,
+        "name": "Artisanal"
+      }
+    }
+  },
+  "user": {
+    "roles": {
+      "admin": "ADMIN",
+      "user": "USER"
+    },
+    "gender": {
+      "male": {
+        "id": 1,
+        "name": "Male"
+      },
+      "female": {
+        "id": 2,
+        "name": "Female"
+      }
+    },
+    "departement": {
+    "artibonite": {
+        "id": 1,
+        "name": "Artibonite"
+      },
+      "centre": {
+        "id": 2,
+        "name": "Centre"
+      },
+    "grand_anse": {
+        "id": 3,
+        "name": "Grand'Anse"
+    },
+    "nippes": {
+        "id": 4,
+        "name": "Nippes"
+    },
+    "nord": {
+        "id": 5,
+        "name": "Nord"
+    },
+    "nord_est": {
+        "id": 6,
+        "name": "Nord-Est"
+    },
+    "nord_ouest": {
+        "id": 7,
+        "name": "Nord-Ouest"
+    },
+    "ouest": {
+        "id": 8,
+        "name": "Ouest"
+    },
+    "sud": {
+        "id": 9,
+        "name": "Sud"
+    },
+    "sud_est": {
+       "id": 10,
+        "name": "Sud-Est"
+      }
+    }, 
+    "ville": { 
+      "Port-au-Prince": {
+        "id": 1,
+        "name": "Port-au-Prince"
+      },
+      "Delmas": {
+        "id": 2,
+        "name": "Delmas"
+      },
+      "Carrefour": {
+        "id": 3,
+        "name": "Carrefour"
+      },
+      "Pétion-Ville": {
+        "id": 4,
+        "name": "Pétion-Ville"
+      },
+      "Kenscoff": {
+        "id": 5,
+        "name": "Kenscoff"
+      },
+      "Gressier": {
+        "id": 6,
+        "name": "Gressier"
+      },
+      "Cité Soleil": {
+        "id": 7,
+        "name": "Cité Soleil"
+      },
+      "Tabarre": {
+        "id": 8,
+        "name": "Tabarre"
+      },
+      "Léogâne": {
+        "id": 9,
+        "name": "Léogâne"
+      },
+      "Petit-Goâve": {
+        "id": 10,
+        "name": "Petit-Goâve"
+      },
+      "Grand-Goâve": {
+        "id": 11,
+        "name": "Grand-Goâve"
+      },
+      "Croix-des-Bouquets": {
+        "id": 12,
+        "name": "Croix-des-Bouquets"
+      },
+      "Thomazeau": {
+        "id": 13,
+        "name": "Thomazeau"
+      },
+      "Ganthier": {
+        "id": 14,
+        "name": "Ganthier"
+      },
+      "Cornillon": {
+        "id": 15,
+        "name": "Cornillon"
+      },
+      "Fonds-Verrettes": {
+        "id": 16,
+        "name": "Fonds-Verrettes"
+      },
+      "Arcahaie": {
+        "id": 17,
+        "name": "Arcahaie"
+      },
+      "Cabaret": {
+        "id": 18,
+        "name": "Cabaret"
+      },
+      "Anse-à-Galets": {
+        "id": 19,
+        "name": "Anse-à-Galets"
+      },
+      "Pointe-à-Raquette": {
+        "id": 20,
+        "name": "Pointe-à-Raquette"
+      }
+    }
+  }
+}
