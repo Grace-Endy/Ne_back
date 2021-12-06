@@ -42,7 +42,7 @@ export async function getAll() {
 // Create FavoriAdresse
 export async function create(parentValue, { adressId }, { auth }) {
   if(auth.user && auth.user.id > 0) {
-    const favoriAdresse = await models.FavoriAdresse.findOne({ where: {adressId } })
+    const favoriAdresse = await models.FavoriAdresse.findOne({ where: {adressId, userId: auth.user.id } })
      if (!favoriAdresse) {
     return await models.FavoriAdresse.create({
       adressId,

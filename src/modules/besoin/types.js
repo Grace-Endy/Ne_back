@@ -1,6 +1,7 @@
 // Imports
 import { GraphQLObjectType, GraphQLString, GraphQLInt } from 'graphql'
 import {UserType} from '../user/types'
+import {AdresseType} from '../adresse/types'
 
 // Besoin type
 const BesoinType = new GraphQLObjectType({
@@ -13,8 +14,9 @@ const BesoinType = new GraphQLObjectType({
     slug: { type: GraphQLString },
     description: { type: GraphQLString },
     categorie: { type: GraphQLInt },
-	  gender: { type: GraphQLInt },
+    gender: { type: GraphQLString },
     user: {type: UserType},
+    adresse: { type: AdresseType },
     prix_unite: { type: GraphQLString },
     prix_unite_devise: { type: GraphQLString },
     prix_stock: { type: GraphQLString },
@@ -63,7 +65,8 @@ const VilleTypesType = new GraphQLObjectType({
 
   fields: () => ({
     id: { type: GraphQLInt },
-    name: { type: GraphQLString }
+    name: { type: GraphQLString },
+    departement: { type: GraphQLInt }
   })
 })
 export { BesoinType, BesoinTypesType,DepartementTypesType,VilleTypesType }

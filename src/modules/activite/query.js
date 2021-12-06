@@ -3,12 +3,20 @@ import { GraphQLString, GraphQLInt, GraphQLList } from 'graphql'
 
 // App Importss
 import { ActiviteType, ActiviteTypesType,ActiviteCategorieTypesType,DepartementTypesType, VilleTypesType } from './types'
-import { getAll, getBySlug,search,searchAll, getById,getByUser, getRelated,getRelatedByCategorie, getTypes,getActiviteCategorieTypes,getDepartementNomsTypes,getVilleNomsTypes } from './resolvers'
+  import { getAll,getAllActivites, getBySlug,search,searchAll, getById,getByUser,getActiviteAVenir,getRelatedByCategoriePage, getRelated,getRelatedByCategorie, getRelatedByCategorieAndId, getTypes,getActiviteCategorieTypes,getDepartementNomsTypes,getVilleNomsTypes } from './resolvers'
 
 // Activites All
 export const activites = {
   type: new GraphQLList(ActiviteType),
   resolve: getAll
+}
+
+export const listActivites = {
+  type: new GraphQLList(ActiviteType),
+  args: {
+    offSetId: { type: GraphQLInt }
+  },
+  resolve: getAllActivites
 }
 
 export const searchActivites = {
@@ -44,7 +52,10 @@ export const activiteById = {
   },
   resolve: getById
 }
-
+export const activiteAVenir = {
+  type: new GraphQLList(ActiviteType),
+  resolve: getActiviteAVenir
+}
 // Activites by user
 export const activitesByUser = {
   type: new GraphQLList(ActiviteType),
@@ -66,6 +77,22 @@ export const activitesRelatedByCategorie = {
     categorieId: { type: GraphQLInt }
   },
   resolve: getRelatedByCategorie
+}
+// Page of Activites Related by categorie 
+export const activitesRelatedByCategoriePage = {  
+    type: new GraphQLList(ActiviteType),  
+    args: { 
+      categorieId: { type: GraphQLInt } 
+    },  
+    resolve: getRelatedByCategoriePage  
+  } 
+export const activitesRelatedByCategorieAndId = { 
+  type: new GraphQLList(ActiviteType),  
+  args: { 
+    categorieId: { type: GraphQLInt },  
+    activiteId: { type: GraphQLInt }  
+  },  
+  resolve: getRelatedByCategorieAndId 
 }
 // Activite Types
 export const activiteTypes = {

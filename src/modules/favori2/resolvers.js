@@ -42,7 +42,8 @@ export async function getAll() {
 // Create Favori2
 export async function create(parentValue, { activiteId }, { auth }) {
   if(auth.user && auth.user.id > 0) {
-    const favori2 = await models.Favori2.findOne({ where: {activiteId } })
+    const favori2 = await models.Favori2.findOne({ where: {activiteId,
+    userId: auth.user.id } })
      if (!favori2) {
     return await models.Favori2.create({
       activiteId,
@@ -50,7 +51,7 @@ export async function create(parentValue, { activiteId }, { auth }) {
     })
   }else {
     // User exists
-    throw new Error(`Vous avez déjà ajouté cette activite à vos favoris.`)
+    throw new Error(`Vous avez déjà ajouté cette activité à vos favoris.`)
   } 
 } 
   else {

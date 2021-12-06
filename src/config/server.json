@@ -9,5 +9,11 @@
   },
   "upload": {
     "endpoint": "/upload"
+  },
+  "sendMail": {
+    "endpoint": "/send-email"
+  },
+  "sendCustomMail": {
+    "endpoint": "/send-custom-email"
   }
 }

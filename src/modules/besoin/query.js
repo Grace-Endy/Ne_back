@@ -3,12 +3,27 @@ import { GraphQLString, GraphQLInt, GraphQLList } from 'graphql'
 
 // App Imports
 import { BesoinType, BesoinTypesType,DepartementTypesType, VilleTypesType  } from './types'
-import { getAll, getBySlug,search,searchAll,getNotificationBesoins, getByUser, getById, getRelated, getRelatedByCategorie, getRelatedByUserId, getTypes,getDepartementNomsTypes,getVilleNomsTypes } from './resolvers'
+import { getAll,getAllBesoins, getBySlug,search,searchAll,getNotificationBesoins,getRelatedByCategoriePage, getByUser, getById,getAccueilBesoins,getAccueilServices,getServicesRelated, getRelated, getRelatedByCategorie, getRelatedByUserId, getRelatedByAdresse, getTypes,getDepartementNomsTypes,getVilleNomsTypes } from './resolvers'
 
 // Besoins All
 export const besoins = {
   type: new GraphQLList(BesoinType),
   resolve: getAll
+}
+
+export const listBesoins = {
+  type: new GraphQLList(BesoinType),
+  args: {
+    offSetId: { type: GraphQLInt }
+  },
+  resolve: getAllBesoins
+}
+
+
+//Accueil Besoins List
+export const accueilBesoins = {
+  type: new GraphQLList(BesoinType),
+  resolve: getAccueilBesoins
 }
 
 export const besoinsNotifications = {
@@ -40,7 +55,14 @@ export const besoin = {
   },
   resolve: getBySlug
 }
-
+// Besoins Related by categorie Page  
+export const besoinsRelatedByCategoriePage = {  
+    type: new GraphQLList(BesoinType),  
+    args: { 
+      categorieId: { type: GraphQLInt } 
+    },  
+    resolve: getRelatedByCategoriePage  
+  }
 // Besoin By ID
 export const besoinById = {
   type: BesoinType,
@@ -81,6 +103,32 @@ export const besoinsRelatedByUserId = {
     userId: { type: GraphQLInt }
   },
   resolve: getRelatedByUserId
+}
+
+// Besoins Related by UserId
+export const besoinsRelatedByAdresse = {
+  type: new GraphQLList(BesoinType),
+  args: {
+    adresseId: { type: GraphQLInt }
+  },
+  resolve: getRelatedByAdresse
+}
+
+export const accueilServices = {
+  type: new GraphQLList(BesoinType),
+  args: {
+    gender: { type: GraphQLString }
+  },
+  resolve: getAccueilServices
+}
+
+export const servicesRelated = {
+  type: new GraphQLList(BesoinType),
+  args: {
+    gender: { type: GraphQLString },
+    categorieId: { type: GraphQLInt }
+  },
+  resolve: getServicesRelated
 }
 
 // Besoin Types

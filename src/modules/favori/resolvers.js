@@ -42,7 +42,8 @@ export async function getAll() {
 // Create Favori
 export async function create(parentValue, { besoinId }, { auth }) {
   if(auth.user && auth.user.id > 0) {
-    const favori = await models.Favori.findOne({ where: {besoinId } })
+    const favori = await models.Favori.findOne({ where: {besoinId, userId: auth.user.id } })
+    
      if (!favori) {
     return await models.Favori.create({
       besoinId,

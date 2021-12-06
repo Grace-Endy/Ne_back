@@ -3,7 +3,7 @@ import { GraphQLString, GraphQLInt, GraphQLList } from 'graphql'
 
 // App Imports
 import { AdresseType, AdresseTypesType,DepartementTypesType, VilleTypesType  } from './types'
-import { getAll, getBySlug,search,searchAll, getById,getByUser, getRelated, getRelatedByCategorie, getTypes,getDepartementNomsTypes,getVilleNomsTypes } from './resolvers'
+import { getAll,getAllAdresses, getBySlug,search,searchAll,getRelatedByCategoriePage, getById,getByUser, getRelated, getRelatedByCategorie, getTypes,getDepartementNomsTypes,getVilleNomsTypes } from './resolvers'
 
 // Adresses All
 export const adresses = {
@@ -11,6 +11,13 @@ export const adresses = {
   resolve: getAll
 }
 
+export const listAdresses = {
+  type: new GraphQLList(AdresseType),
+  args: {
+    offSetId: { type: GraphQLInt }
+  },
+  resolve: getAllAdresses
+}
 // Adresses By slug
 export const adresse = {
   type: AdresseType,
@@ -35,7 +42,14 @@ export const searchAdressesALl = {
   },
   resolve: searchAll
 }
-
+// Page of Adresse Related by categorie
+  export const adressesRelatedByCategoriePage = {
+    type: new GraphQLList(AdresseType),
+    args: {
+      categorieId: { type: GraphQLInt }
+    },
+    resolve: getRelatedByCategoriePage
+  }
 // Adresse By ID
 export const adresseById = {
   type: AdresseType,

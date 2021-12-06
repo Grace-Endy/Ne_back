@@ -1,7 +1,7 @@
 {
   "adresse": {
     "types": {
-      "banque": {
+"banque": {
         "id": 3,
         "name": "Banque"
       },
@@ -45,7 +45,7 @@
         "id": 14,
         "name": "Centre de divertissement"
       },                                      
-"centre-de_sante": {
+"centre_de_sante": {
         "id": 15,
         "name": "Centre de santé"
       },
@@ -188,7 +188,11 @@
 "prison": {
         "id": 62,
         "name": "Prison"
-      },      
+      },    
+"radio": {
+        "id": 12,
+        "name": "Radio"
+      },   
 "restaurant": {
         "id": 63,
         "name": "Restaurant"
@@ -220,7 +224,11 @@
 "tailleur": {
         "id": 70,
         "name": "Tailleur"
-      },  
+      },
+"television": {
+        "id": 22,
+        "name": "Chaine de Television"
+      },        
 "warf_port": {
         "id": 72,
         "name": "Warf/Port"
@@ -232,6 +240,10 @@
 "usine": {
         "id": 76,
         "name": "Usine"
+      },
+"autre": {
+        "id": 26,
+        "name": "Autre"
       }  
     }
   },
@@ -438,8 +450,21 @@
   "user": {
     "roles": {
       "admin": "ADMIN",
-      "user": "USER"
+      "user": "USER",
+      "starter":"STARTER",
+      "basic":"BASIC",
+      "intermediate":"INTERMEDIATE",
+      "premium_v1":"PREMIUM V1",
+      "premium_v2":"PREMIUM V2",
+      "premium_v3":"PREMIUM V3",
+      "advanced":"ADVANCED"
     },
+    "comptes":{
+        "personnel":"Personnel",
+        "marchand":"Marchand",
+        "groupe":"Groupe",
+        "institution":"Institution"
+      },
     "gender": {
       "male": {
         "id": 1,
@@ -492,87 +517,722 @@
         "name": "Sud-Est"
       }
     }, 
-    "ville": { 
-      "Port-au-Prince": {
-        "id": 1,
-        "name": "Port-au-Prince"
+       "ville": { 
+"Acul-du-Nord": {
+        "id": 21,
+        "name": "Acul-du-Nord",
+        "departement":5
       },
-      "Delmas": {
-        "id": 2,
-        "name": "Delmas"
-      },
-      "Carrefour": {
-        "id": 3,
-        "name": "Carrefour"
-      },
-      "Pétion-Ville": {
-        "id": 4,
-        "name": "Pétion-Ville"
-      },
-      "Kenscoff": {
-        "id": 5,
-        "name": "Kenscoff"
-      },
-      "Gressier": {
-        "id": 6,
-        "name": "Gressier"
-      },
-      "Cité Soleil": {
-        "id": 7,
-        "name": "Cité Soleil"
-      },
-      "Tabarre": {
-        "id": 8,
-        "name": "Tabarre"
-      },
-      "Léogâne": {
-        "id": 9,
-        "name": "Léogâne"
-      },
-      "Petit-Goâve": {
-        "id": 10,
-        "name": "Petit-Goâve"
-      },
-      "Grand-Goâve": {
-        "id": 11,
-        "name": "Grand-Goâve"
-      },
-      "Croix-des-Bouquets": {
-        "id": 12,
-        "name": "Croix-des-Bouquets"
-      },
-      "Thomazeau": {
-        "id": 13,
-        "name": "Thomazeau"
-      },
-      "Ganthier": {
-        "id": 14,
-        "name": "Ganthier"
-      },
-      "Cornillon": {
-        "id": 15,
-        "name": "Cornillon"
-      },
-      "Fonds-Verrettes": {
-        "id": 16,
-        "name": "Fonds-Verrettes"
-      },
-      "Arcahaie": {
-        "id": 17,
-        "name": "Arcahaie"
-      },
-      "Cabaret": {
-        "id": 18,
-        "name": "Cabaret"
+      "Anse-à-Foleur": {
+        "id": 22,
+        "name": "Anse-à-Foleur",
+        "departement":7
       },
       "Anse-à-Galets": {
         "id": 19,
-        "name": "Anse-à-Galets"
+        "name": "Anse-à-Galets",
+        "departement":8
       },
-      "Pointe-à-Raquette": {
+     "Anse-à-Pitres": {
+        "id": 23,
+        "name": "Anse-à-Pitres",
+        "departement":10
+      },
+      "Anse-à-Veau": {
+        "id": 24,
+        "name": "Anse-à-Veau",
+        "departement":4
+      },
+      "Anse-d'Hainault": {
+        "id": 25,
+        "name": "Anse-d'Hainault",
+        "departement":3
+      },
+      "Anse-Rouge": {
+        "id": 26,
+        "name": "Anse-Rouge",
+        "departement":1
+      },
+      "Aquin": {
+        "id": 27,
+        "name": "Aquin",
+        "departement":9
+      },
+      "Arcahaie": {
+        "id": 17,
+        "name": "Arcahaie",
+        "departement":8
+      },
+      "Arnaud": {
+        "id": 28,
+        "name": "Arnaud",
+        "departement":4
+      },
+      "Arniquet": {
+        "id": 29,
+        "name": "Arniquet",
+        "departement":9
+      },
+      "Bahon": {
+        "id": 30,
+        "name": "Bahon",
+        "departement":5
+      },
+      "Baie-de-Henne": {
+        "id": 31,
+        "name": "Baie-de-Henne",
+        "departement":7
+      },
+      "Bainet": {
+        "id": 32,
+        "name": "Bainet",
+        "departement":10
+      },
+"Baptiste": {
+        "id": 33,
+        "name": "Baptiste",
+        "departement":2
+      },
+      "Barradères": {
+        "id": 34,
+        "name": "Barradères",
+        "departement":4
+      },
+      "Bas-Limbé": {
+        "id": 35,
+        "name": "Bas-Limbé",
+        "departement":5
+      },
+      "Bassin-Bleu": {
+        "id": 36,
+        "name": "Bassin-Bleu",
+        "departement":7
+      },
+      "Beaumont": {
+        "id": 37,
+        "name": "Beaumont",
+        "departement":3
+      },
+      "Belladère": {
+        "id": 38,
+        "name": "Belladère",
+        "departement":2
+      },
+      "Belle-Anse": {
+        "id": 39,
+        "name": "Belle-Anse",
+        "departement":10
+      },
+      "Bombardopolis": {
+        "id": 40,
+        "name": "Bombardopolis",
+        "departement":7
+      },
+      "Bonbon": {
+        "id":41,
+        "name": "Bonbon",
+        "departement":10
+      },
+      "Borgne": {
+        "id": 42,
+        "name": "Borgne",
+        "departement":5
+      },
+      "Boucan-Carré": {
+        "id": 43,
+        "name": "Boucan-Carré",
+        "departement":2
+      },
+"Cabaret": {
+        "id": 18,
+        "name": "Cabaret",
+        "departement":8
+      },
+      "Camp-Perrin": {
+        "id": 44,
+        "name": "Camp-Perrin",
+        "departement":9
+      },
+"Cap-Haïtien": {
+        "id": 45,
+        "name": "Cap-Haïtien",
+        "departement":5
+      },
+      "Capotille": {
+        "id": 46,
+        "name": "Capotille",
+        "departement":6
+      },
+      "Caracol": {
+        "id": 47,
+        "name": "Caracol",
+        "departement":6
+      },
+      "Carice": {
+        "id": 48,
+        "name": "Carice",
+        "departement":6
+      },
+  "Carrefour": {
+        "id": 3,
+        "name": "Carrefour",
+        "departement":8
+      },
+      "Cavaillon": {
+        "id": 49,
+        "name": "Cavaillon",
+        "departement":9
+      },
+      "Cayes-Jacmel": {
+        "id": 50,
+        "name": "Cayes-Jacmel",
+        "departement":10
+      },
+      "Cerca-Carvajal": {
+        "id": 51,
+        "name": "Cerca-Carvajal",
+        "departement":2
+      },
+      "Cerca-la-Source": {
+        "id": 52,
+        "name": "Cerca-la-Source",
+        "departement":2
+      },
+      "Chambellan": {
+        "id": 53,
+        "name": "Chambellan",
+        "departement":3
+      },
+      "Chansolme": {
+        "id": 54,
+        "name": "Chansolme",
+        "departement":7
+      },
+      "Chantal": {
+        "id": 55,
+        "name": "Chantal",
+        "departement":9
+      },
+      "Chardonnières": {
+        "id": 56,
+        "name": "Chardonnières",
+        "departement":9
+      },
+"Cité Soleil": {
+        "id": 7,
+        "name": "Cité Soleil",
+        "departement":8
+      },
+"Corail": {
+        "id": 57,
+        "name": "Corail",
+        "departement":3
+      },
+"Cornillon": {
+        "id": 15,
+        "name": "Cornillon",
+        "departement":8
+      },
+"Côteaux": {
+        "id": 144,
+        "name": "Côteaux",
+        "departement":9
+      }, 
+"Côtes-de-Fer": {
+        "id": 58,
+        "name": "Côtes-de-Fer",
+        "departement":10
+      },     
+"Croix-des-Bouquets": {
+        "id": 12,
+        "name": "Croix-des-Bouquets",
+        "departement":8
+      },
+ "Dame-Marie": {
+        "id": 59,
+        "name": "Dame-Marie",
+        "departement":3
+      },
+"Delmas": {
+        "id": 2,
+        "name": "Delmas",
+        "departement":8
+      },
+"Desdunes": {
+        "id": 60,
+        "name": "Desdunes",
+        "departement":1
+      },
+"Dessalines": {
+        "id": 61,
+        "name": "Dessalines",
+        "departement":1
+      },
+"Dondon": {
+        "id": 62,
+        "name": "Dondon",
+        "departement":5
+      },
+"Ennery": {
+        "id": 63,
+        "name": "Ennery",
+        "departement":1
+      },
+" Ferrier": {
+        "id": 64,
+        "name": " Ferrier",
+        "departement":6
+      },
+"Fond des Blancs": {
+        "id": 65,
+        "name": "Fond des Blancs",
+        "departement":4
+      },
+"Fonds-des-Nègres": {
+        "id": 66,
+        "name": "Fonds-des-Nègres",
+        "departement":4
+      },
+"Fonds-Verrettes": {
+        "id": 16,
+        "name": "Fonds-Verrettes",
+        "departement":8
+      },
+"Fort-Liberté": {
+        "id": 67,
+        "name": "Fort-Liberté",
+        "departement":6
+      },
+"Ganthier": {
+        "id": 14,
+        "name": "Ganthier",
+        "departement":8
+      },
+"Gonaïves": {
+        "id": 68,
+        "name": "Gonaïves",
+        "departement":1
+      },
+"Grand-Boucan": {
+        "id": 69,
+        "name": "Grand-Boucan",
+        "departement":4
+      },
+"Grande-Rivière-du-Nord": {
+        "id": 70,
+        "name": "Grande-Rivière-du-Nord",
+        "departement":5
+      },
+"Grande-Saline": {
+        "id": 71,
+        "name": "Grande-Saline",
+        "departement":1
+      },
+"Grand-Goâve": {
+        "id": 11,
+        "name": "Grand-Goâve",
+        "departement":8
+      },
+"Grand-Gosier": {
+        "id": 72,
+        "name": "Grand-Gosier",
+        "departement":10
+      },
+"Gressier": {
+        "id": 6,
+        "name": "Gressier",
+        "departement":10
+      }, 
+"Gros-Morne": {
+        "id": 73,
+        "name": "Gros-Morne",
+        "departement":1
+      },
+"Hinche": {
+        "id": 74,
+        "name": "Hinche",
+        "departement":2
+      },
+"Île-à-Vache": {
+        "id": 75,
+        "name": "Île-à-Vache",
+        "departement":9
+      },
+"Jacmel": {
+        "id": 76,
+        "name": "Jacmel",
+        "departement":10
+      },
+"Jean-Rabel": {
+        "id": 77,
+        "name": "Jean-Rabel",
+        "departement":7
+      },
+"Jérémie": {
+        "id": 78,
+        "name": "Jérémie",
+        "departement":3
+      },
+"Kenscoff": {
+        "id": 5,
+        "name": "Kenscoff",
+        "departement":8
+      }, 
+"La Chapelle": {
+        "id": 79,
+        "name": "La Chapelle",
+        "departement":1
+      },
+"La Tortue": {
+        "id": 80,
+        "name": "La Tortue",
+        "departement":7
+      },
+"La Vallée": {
+        "id": 81,
+        "name": "La Vallée",
+        "departement":10
+      },
+"La Victoire": {
+        "id": 82,
+        "name": "La Victoire",
+        "departement":5
+      },
+"Lapointe": {
+        "id": 83,
+        "name": "Lapointe",
+        "departement":1
+      },
+"L'Asile": {
+        "id": 85,
+        "name": "L'Asile",
+        "departement":4
+      },
+"Léogâne": {
+        "id": 9,
+        "name": "Léogâne",
+        "departement":7
+      },
+"Les Anglais": {
+        "id": 86,
+        "name": "Les Anglais",
+        "departement":9
+      },
+"Les Cayes": {
+        "id": 87,
+        "name": "Les Cayes",
+        "departement":9
+      },
+"Les Irois": {
+        "id": 88,
+        "name": "Les Irois",
+        "departement":9
+      },
+"L'Estère": {
+        "id": 89,
+        "name": "L'Estère",
+        "departement":1
+      },
+"Liancourt": {
+        "id": 90,
+        "name": "Liancourt",
+        "departement":5
+      },
+"Limbé": {
+        "id": 91,
+        "name": "Limbé",
+        "departement":5
+      },
+"Limonade": {
+        "id": 92,
+        "name": "Limonade",
+        "departement":5
+      },
+"Maïssade": {
+        "id": 93,
+        "name": "Maïssade",
+        "departement":2
+      },
+"Maniche": {
+        "id": 94,
+        "name": "Maniche",
+        "departement":9
+      },
+"Marfranc": {
+        "id": 95,
+        "name": "Marfranc",
+        "departement":3
+      },
+"Marigot": {
+        "id": 96,
+        "name": "Marigot",
+        "departement":10
+      },
+"Marmelade": {
+        "id": 97,
+        "name": "Marmelade",
+        "departement":1
+      },
+"Milot": {
+        "id": 98,
+        "name": "Milot",
+        "departement":5
+      },
+"Miragoâne": {
+        "id": 99,
+        "name": "Miragoâne",
+        "departement":4
+      },
+"Mirebalais": {
+        "id": 100,
+        "name": "Mirebalais",
+        "departement":2
+      },
+"Môle-Saint-Nicolas": {
+        "id": 101,
+        "name": "Môle-Saint-Nicolas",
+        "departement":7
+      },
+"Mombin-Crochu": {
+        "id": 102,
+        "name": "Mombin-Crochu",
+        "departement":6
+      },
+"Mont-Organisé": {
+        "id": 103,
+        "name": "Mont-Organisé",
+        "departement":6
+      },
+"Moron": {
+        "id": 104,
+        "name": "Moron",
+        "departement":3
+      },
+"Ouanaminthe": {
+        "id": 105,
+        "name": "Ouanaminthe",
+        "departement":6
+      },
+"Paillant": {
+        "id": 106,
+        "name": "Paillant",
+        "departement":4
+      },
+"Perches ": {
+        "id": 107,
+        "name": " Perches",
+        "departement":6
+      },
+"Pestel": {
+        "id": 108,
+        "name": "Pestel",
+        "departement":3
+      },
+"Pétion-Ville": {
+        "id": 4,
+        "name": "Pétion-Ville",
+        "departement":8
+      },
+"Petite Rivière de l'Artibonite": {
+        "id": 109,
+        "name": "Petite Rivière de l'Artibonite",
+        "departement":1
+      },
+"Petite-Rivière-de-Nippes": {
+        "id": 110,
+        "name": "Petite-Rivière-de-Nippes",
+        "departement":4
+      },
+"Petit-Goâve": {
+        "id": 10,
+        "name": "Petit-Goâve",
+        "departement":8
+      },
+"Petit-Trou-de-Nippes": {
+        "id": 111,
+        "name": "Petit-Trou-de-Nippes",
+        "departement":4
+      },
+"Pignon": {
+        "id": 112,
+        "name": "Pignon",
+        "departement":5
+      },
+"Pilate": {
+        "id": 113,
+        "name": "Pilate",
+        "departement":5
+      },
+"Plaine-du-Nord ": {
+        "id": 114,
+        "name": "Plaine-du-Nord ",
+        "departement":5
+      },
+"Plaisance": {
+        "id": 115,
+        "name": "Plaisance",
+        "departement":5
+      },
+"Plaisance-du-Sud": {
+        "id": 116,
+        "name": "Plaisance-du-Sud",
+        "departement":9
+      },
+"Pointe-à-Raquette": {
         "id": 20,
-        "name": "Pointe-à-Raquette"
-      }
+        "name": "Pointe-à-Raquette",
+        "departement":8
+      },
+"Port-à-Piment": {
+        "id": 117,
+        "name": "Port-à-Piment",
+        "departement":9
+      },
+"Port-au-Prince": {
+        "id": 1,
+        "name": "Port-au-Prince",
+        "departement":8
+      },
+"Port-de-Paix": {
+        "id": 118,
+        "name": "Port-de-Paix",
+        "departement":7
+      },
+"Port-Margot": {
+        "id": 119,
+        "name": "Port-Margot",
+        "departement":5
+      },
+"Port-Salut": {
+        "id": 120,
+        "name": "Port-Salut",
+        "departement":9
+      },
+"Quartier-Morin": {
+        "id": 121,
+        "name": "Quartier-Morin",
+        "departement":5
+      },
+"Ranquitte": {
+        "id": 122,
+        "name": "Ranquitte",
+        "departement":5
+      },
+"Roche-à-Bateaux": {
+        "id": 123,
+        "name": "Roche-à-Bateaux",
+        "departement":9
+      },
+"Roseaux": {
+        "id": 124,
+        "name": "Roseaux",
+        "departement":3
+      },
+"Sainte-Suzanne": {
+        "id": 125,
+        "name": "Sainte-Suzanne",
+        "departement":6
+      },
+"Saint-Jean-du-Sud": {
+        "id":126,
+        "name": "Saint-Jean-du-Sud",
+        "departement":9
+      },
+"Saint-Louis-du-Nord": {
+        "id": 127,
+        "name": "Saint-Louis-du-Nord",
+        "departement":7
+      },
+"Saint-Louis-du-Sud": {
+        "id": 128,
+        "name": "Saint-Louis-du-Sud",
+        "departement":9
+      },
+" Saint-Marc": {
+        "id": 129,
+        "name": " Saint-Marc",
+        "departement":1
+      },
+"Saint-Michel-de-l'Atalaye": {
+        "id": 130,
+        "name": "Saint-Michel-de-l'Atalaye",
+        "departement":1
+      },
+"Saint-Raphaël": {
+        "id": 131,
+        "name": "Saint-Raphaël",
+        "departement":5
+      },
+"Saut-d'Eau": {
+        "id": 132,
+        "name": "Saut-d'Eau",
+        "departement":2
+      },
+"Savanette": {
+        "id": 133,
+        "name": "Savanette",
+        "departement":2
+      },
+"Tabarre": {
+        "id": 8,
+        "name": "Tabarre",
+        "departement":8
+      }, 
+"Terre-Neuve": {
+        "id": 134,
+        "name": "Terre-Neuve",
+        "departement":1
+      },
+"Terrier-Rouge": {
+        "id": 135,
+        "name": "Terrier-Rouge",
+        "departement":6
+      },
+"Thiotte": {
+        "id": 136,
+        "name": "Thiotte",
+        "departement":10
+      },
+"Thomassique": {
+        "id": 137,
+        "name": "Thomassique",
+        "departement":2
+      },
+"Thomazeau": {
+        "id": 13,
+        "name": "Thomazeau",
+        "departement":8
+      },
+"Thomonde": {
+        "id": 138,
+        "name": "Thomonde",
+        "departement":2
+      },
+"Tiburon": {
+        "id": 139,
+        "name": "Tiburon",
+        "departement":9
+      },
+"Torbeck": {
+        "id": 140,
+        "name": "Torbeck",
+        "departement":9
+      },
+"Trou-du-Nord": {
+        "id": 141,
+        "name": "Trou-du-Nord",
+        "departement":6
+      },
+"Vallières": {
+        "id": 142,
+        "name": "Vallières",
+        "departement":6
+      },
+"Verrettes": {
+        "id": 143,
+        "name": "Verrettes",
+        "departement":1
+      } 
     }
   }
 }
